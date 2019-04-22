@@ -44,9 +44,11 @@ def mail(subject,body):
 	    server.login(sender_email, password)
 	    server.sendmail(sender_email, receiver_email, text)
 
+# Initialize display for raspberry pi
 display = Display(visible=0, size=(800, 600))
 display.start()
 
+# Initialize webdriver
 driver = webdriver.Firefox()
 driver.get("***website_link***")
 
@@ -54,6 +56,7 @@ mail("Script initialized","Driver initialized and running")
 time.sleep(10)
 a=False
 
+# Refresh website until the update is seen.
 while not a:
 	try:
     		elem = WebDriverWait(driver, 10).until(
