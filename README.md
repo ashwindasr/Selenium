@@ -1,2 +1,2 @@
 # SeleniumTrials
-Trying out selenium
+Web Automation
